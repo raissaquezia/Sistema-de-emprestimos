@@ -1,1 +1,3 @@
-# Sistema-de-emprestimos
+# Sistema de Gerenciamento de Emprestimos
+
+Este projeto é um sistema de gerenciamento de empréstimos de equipamentos desenvolvido em Java, permitindo realizar operações CRUD para funcionários, equipamentos e empréstimos. Ele inclui funcionalidades para cadastrar, atualizar, excluir e consultar funcionários e equipamentos, além de registrar e gerenciar empréstimos de equipamentos por funcionários. O sistema também controla a disponibilidade dos equipamentos e utiliza um enum para gerenciar o estado de conservação dos equipamentos (Ruim, Bom, Ótimo). Validações garantem que empréstimos só possam ser realizados com funcionários e equipamentos cadastrados e disponíveis.
