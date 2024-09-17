@@ -97,6 +97,9 @@ public class Funcionarios {
 
     public static void atualizarFuncionarios() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println();
+        exibirFuncionarios();
+        System.out.println();
         System.out.println("Digite o código do funcionário para atualizar: ");
         int codigo = scanner.nextInt();
         scanner.nextLine();
@@ -118,6 +121,9 @@ public class Funcionarios {
 
     public static void excluirFuncionarios() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println();
+        exibirFuncionarios();
+        System.out.println();
         System.out.println("Digite o código do funcionário para excluir: ");
         int codigo = scanner.nextInt();
         scanner.nextLine();
