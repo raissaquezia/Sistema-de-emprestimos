@@ -198,28 +198,36 @@ public class Emprestimos {
 
         System.out.println("Empréstimos realizados: ");
         exibirEmprestimos();
-        System.out.println("Digite o índice do empréstimo que deseja atualizar: ");
-        Emprestimos emprestimo = emprestimosList.get(scanner.nextInt()+1);
-        scanner.nextLine();
+        System.out.println("Digite o código do empréstimo que deseja atualizar: ");
+        String codigo = scanner.nextLine();
 
-        System.out.println("Atualizar informações do empréstimo:");
-        System.out.println("Nova Data de Saída: ");
-        emprestimo.setDataSaida(scanner.nextLine());
-        System.out.println("Nova Hora de Saída: ");
-        emprestimo.setHoraSaida(scanner.nextLine());
-        System.out.println("Nova Data de Retorno: ");
-        emprestimo.setDataRetorno(scanner.nextLine());
-        System.out.println("Nova Hora de Retorno: ");
-        emprestimo.setHoraRetorno(scanner.nextLine());
-        System.out.println("Observações adicionais: ");
-        emprestimo.setObservacoes(scanner.nextLine());
+        for (Emprestimos emprestimo : emprestimosList){
+            if (codigo.equals(emprestimo.getCodigo())){
+                System.out.println("Atualizar informações do empréstimo:");
+                System.out.println("Nova Data de Saída: ");
+                emprestimo.setDataSaida(scanner.nextLine());
+                System.out.println("Nova Hora de Saída: ");
+                emprestimo.setHoraSaida(scanner.nextLine());
+                System.out.println("Nova Data de Retorno: ");
+                emprestimo.setDataRetorno(scanner.nextLine());
+                System.out.println("Nova Hora de Retorno: ");
+                emprestimo.setHoraRetorno(scanner.nextLine());
+                System.out.println("Observações adicionais: ");
+                emprestimo.setObservacoes(scanner.nextLine());
 
-        System.out.println("Empréstimo atualizado com sucesso!");
+                System.out.println("Empréstimo atualizado com sucesso!");
+
+                return;
+            }
+        }
+        System.out.println("Empréstimo não encontrado");
     }
 
     public static void excluirEmprestimos() {
-        exibirEmprestimos();
         Scanner scanner = new Scanner(System.in);
+        System.out.println();
+        exibirEmprestimos();
+        System.out.println();
         System.out.println("Digite o código do empréstimo que deseja excluir: ");
         String codigo = scanner.nextLine();
 
