@@ -204,6 +204,9 @@ public class Equipamentos {
 
     public static void atualizarEquipamentos() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println();
+        exibirEquipamentos();
+        System.out.println();
         System.out.println("Digite o código do equipamento para atualizar: ");
         int codigo = scanner.nextInt();
         scanner.nextLine();
@@ -263,6 +266,9 @@ public class Equipamentos {
 
     public static void excluirEquipamentos() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println();
+        exibirEquipamentos();
+        System.out.println();
         System.out.println("Digite o código do equipamento para excluir: ");
         int codigo = scanner.nextInt();
         scanner.nextLine();
@@ -281,4 +287,29 @@ public class Equipamentos {
             System.out.println("Equipamento não foi encontrado.");
         }
     }
+
+    public static void adicionarManutencaoPorCodigo() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println();
+        exibirEquipamentos();
+        System.out.println();
+        System.out.print("Digite o código do equipamento: ");
+        int codigo = scanner.nextInt();
+        scanner.nextLine();
+
+        for (Equipamentos equipamento : equipamentosList) {
+            if (equipamento.getCodigo() == codigo) {
+
+                System.out.print("Digite a descrição da manutenção: ");
+                String manutencao = scanner.nextLine();
+
+                equipamento.adicionarManutencao(manutencao);
+                System.out.println("Manutenção adicionada ao equipamento com sucesso.");
+                return;
+            }
+        }
+
+        System.out.println("Equipamento não encontrado.");
+    }
+
 }
