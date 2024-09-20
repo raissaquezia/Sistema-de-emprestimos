@@ -20,4 +20,4 @@ O sistema também utiliza um **enum** para gerenciar o estado de conservação d
 
 ### Desenvolvido por:
 - Raissa Quezia
-- Ellen Maria
+- Maria Ellen
